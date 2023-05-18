@@ -14,22 +14,12 @@ public class AI : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if(_agent.remainingDistance <= 0.5 && _startMove == false)
-        {
-            _point--;
-            var waypoint = _wayPoint[0];
-            _agent.SetDestination(waypoint.transform.position);
-            _startMove = true;
-        }
-        if (_agent.remainingDistance <= 0.5 && _point <= 0 && _startMove == true)
+       
+        if (_agent.remainingDistance <= 0.5 && _point <= 1)
         {
             _point++;
             var waypoint = _wayPoint[_point];
