@@ -860,7 +860,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6898368192240739544}
   - component: {fileID: 6898368192247892660}
-  - component: {fileID: 6898368192240615378}
   - component: {fileID: 5996966036611063994}
   - component: {fileID: 6898368192240615377}
   m_Layer: 0
@@ -907,24 +906,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &6898368192240615378
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898368192240646392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5996966036611063994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -937,12 +918,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60c74b1a7f7bf64f9553b473a648051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wayPoint:
-  - {fileID: 7383470015757342217, guid: 6deaef37a13e7ab449c3e10ce3bdd6ba, type: 3}
-  - {fileID: 8945727258995807278, guid: c1fe1e9c64f94784b8c553ae18dc06b1, type: 3}
-  - {fileID: 8018320990275496804, guid: 485257842836ec94689b3dc51e0e7d44, type: 3}
+  _wayPoint: []
+  _end: {fileID: 5518861252669773481, guid: a9c3ae888a413434788f942cf453ca8e, type: 3}
   _agent: {fileID: 6898368192240615377}
-  _point: 0
+  _currentState: 0
+  _placeToHide: 0
+  _time: 0
+  _goToEnd: 0
+  _noPath: 0
 --- !u!195 &6898368192240615377
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -953,9 +936,9 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 0
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
