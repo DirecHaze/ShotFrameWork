@@ -5,14 +5,21 @@ TagManager:
   serializedVersion: 2
   tags:
   - Point
+  - Bot
+  - Parts
+  - Environment
+  - End
+  - Exp
+  - Barrel
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Environment
   - Water
   - UI
-  - 
+  - Shootable
   - 
   - 
   - 
